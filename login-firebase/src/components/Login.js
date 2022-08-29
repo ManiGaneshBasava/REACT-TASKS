@@ -18,7 +18,6 @@ function Login() {
 
     const getBooks = async () => {
         const data = await Services.getAllUsers()
-        console.log(data);
         setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
 
     };

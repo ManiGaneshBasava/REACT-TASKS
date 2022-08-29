@@ -14,11 +14,6 @@ function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(fName);
-        console.log(lName);
-        console.log(email);
-        console.log(password);
-
         const newUser = {
             fName,
             lName,

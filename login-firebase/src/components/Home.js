@@ -19,7 +19,6 @@ function Home() {
 
     const getContacts = async () => {
         const data = await Services.getAllContacts();
-        console.log(data);
         setContacts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
 
     };

@@ -10,14 +10,11 @@ function Edit() {
     const [address, setAddress] = useState();
     const navigate = useNavigate()
     const location = useLocation();
-    console.log(location.state.id);
 
 
     const editHandler = async () => {
-        console.log("edit");
         try {
             const editData = await services.getContact(location.state.id)
-            console.log(editData);
             setName(editData.data().name);
             setEmail(editData.data().email);
             setMobile(editData.data().mobile);

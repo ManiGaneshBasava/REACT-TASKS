@@ -41,7 +41,7 @@ function Login() {
 
 
     return (
-        <div className='form'>{console.log(users)}
+        <div className='form'>
             <form onSubmit={handleSubmit}>
 
                 <div className="input-group mb-3">

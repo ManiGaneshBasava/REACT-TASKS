@@ -2,9 +2,7 @@ import { db } from "../firebase-config";
 import { collection, getDoc, getDocs, addDoc, updateDoc, deleteDoc, doc } from "firebase/firestore";
 
 const userCollectionRef = collection(db, "Users")
-
 const contactCollectionRef = collection(db, "Contacts")
-
 
 class UserDataService {
 
@@ -31,13 +29,9 @@ class UserDataService {
         return getDoc(userDoc)
     }
 
-
-
-
     addContact = (newContact) => {
         return addDoc(contactCollectionRef, newContact)
     }
-
 
     getAllContacts = () => {
         return getDocs(contactCollectionRef)
@@ -58,10 +52,6 @@ class UserDataService {
         const userDoc = doc(db, "Contacts", id);
         return updateDoc(userDoc, updateContact);
     }
-
-
-
-
 }
 
 export default new UserDataService();

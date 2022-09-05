@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Services from '../services/services'
 
-
 function AddContact() {
 
     const [name, setName] = useState();
@@ -24,7 +23,6 @@ function AddContact() {
         await Services.addContact(newContact)
         navigate("/home")
     }
-
 
     return (
         <div className='form'>

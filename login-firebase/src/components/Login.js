@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../redux/Action';
 import Services from '../services/services'
 
-
 function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -13,10 +12,9 @@ function Login() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        getBooks();
+        getUsers();
     }, [])
-
-    const getBooks = async () => {
+    const getUsers = async () => {
         const data = await Services.getAllUsers()
         setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     };
@@ -36,8 +34,6 @@ function Login() {
         }
 
     }
-
-
 
     return (
         <div className='form'>
@@ -59,5 +55,4 @@ function Login() {
         </div>
     )
 }
-
 export default Login

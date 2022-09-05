@@ -50,7 +50,6 @@ function Home() {
             });
     }
 
-
     const handleEdit = (e) => {
         <Edit id={e} />
         console.log(typeof (e));
